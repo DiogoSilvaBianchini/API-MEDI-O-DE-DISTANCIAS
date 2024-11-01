@@ -10,7 +10,6 @@ app.use(morgan("dev"))
 app.use(router)
 
 app.use((error,req,res,next) => {
-    console.log(error)
     return res.status(500).json({msg: "Algo deu errado!", results: false, status: 500})
 })
 
